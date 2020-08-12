@@ -1,6 +1,7 @@
 module Api
   class V10::Links < Grape::API
     helpers ::Helpers::LinksHelper
+    helpers ::Helpers::ApiPaginationHelper
 
     namespace :links do
       desc 'Create a new link' do
@@ -38,6 +39,18 @@ module Api
             say_not_found
           end
         end
+      end
+
+      desc 'View all links' do
+        entity Entities::Link
+      end
+      params do
+        use :pagination
+      end
+      get '/' do
+        links = Link.paginate(pagination_values.to_h)
+
+        present links, with: Entities::Link
       end
     end
   end
