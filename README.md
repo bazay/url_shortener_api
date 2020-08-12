@@ -35,6 +35,52 @@ Write this like you would write production code at your company.
   * We know this is a very open-ended project and a lot of time could be spent on it, we are looking for you to prioritize the most important areas of the problem and focus on those, we don’t want you spending multiple days on this project
 * Let us know what things you may not have completed but you think could be additions if you were to spend more time
 
+## Installation
+
+Make sure gems are installed using bundler and relevant dependencies are met i.e.:
+* ruby 2.6.5
+* rails 6.0.2.1
+
+You can run the following script to setup the application:
+```
+bin/setup
+```
+
+## Usage
+
+Start the server using:
+```
+bin/rails server
+```
+
+#### Postman
+
+Postman provides a nice UI for making API requests. You can download it below:   
+https://www.postman.com/downloads/
+
+Once you have downloaded Postman you can import the **collections** and **environments** provided under `/lib/postman/` directory.
+
+Once you have imported the examples into postman, you can either use the local environment once you have the Rails server running locally.   
+If you would rather skip the app setup you can run the collection against the Heroku environment config, which points to https://urls-bb.herokuapp.com.
+
+## Running tests
+
+Tests have been written using RSpec. You can run the entire test-suite using the following command:
+```
+bundle exec rspec
+```
+
+## Deployment
+
+Deployment is very simple, ensure you have heroku remote added:
+```
+git remote add heroku https://git.heroku.com/urls-bb.git
+```
+If you have sufficient deployment permissions, you can then deploy using:
+```
+git push heroku master
+```
+
 ## Api Reference
 
 You can make the following API requests.
