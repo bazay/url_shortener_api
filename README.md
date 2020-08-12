@@ -46,9 +46,30 @@ Params
   * url (string) - The URL you would like to shorten.
 
 Response
+_Success_
 * Hash
   * slug (string) - the shortened slug
   * url (string) - the original URL to be shortened
   * usage_count (integer) - the number of times this link has redirected
   * expires_at (datetime) - an optional expiry attribute, iso formatted
   * created_at (datetime) - creation datetime, iso formatted
+
+_Error_
+* 422 Unprocessable Entity
+
+**GET /api/v1.0/links/:slug**
+
+Params
+* slug (string) - The slug attached to the link
+
+Response
+_Success_
+* Hash
+  * slug (string) - the shortened slug
+  * url (string) - the original URL to be shortened
+  * usage_count (integer) - the number of times this link has redirected
+  * expires_at (datetime) - an optional expiry attribute, iso formatted
+  * created_at (datetime) - creation datetime, iso formatted
+
+_Error_
+* 404 Not Found

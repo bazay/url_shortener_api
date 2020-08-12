@@ -4,12 +4,13 @@ inherit_from: .rubocop_todo.yml
 
 Metrics/BlockLength:
   Exclude:
-    - spec/*/*.rb
+    - spec/**/*.rb
     - lib/tasks/auto_annotate_models.rake
+    - app/api/api/v10/links.rb
 
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
   Exclude:
-    - app/api/api/*/*.rb
+    - app/api/**/*.rb
 
