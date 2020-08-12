@@ -24,6 +24,15 @@ module UrlShortenerApi
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.paths.add 'app/api', glob: '**/*.rb'
+
+    # Custom directories with classes and modules that should be loaded without namespace
+    # additional_paths = %W(
+    #   #{config.root}/app/api/helpers
+    # )
+    # config.autoload_paths += additional_paths
+    # config.eager_load_paths += additional_paths
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount UrlShortenerApi::ApplicationApi => '/'
+  mount ApplicationApi => '/'
 end

@@ -1,4 +1,4 @@
-RSpec.describe UrlShortenerApi::ApplicationApi do
+RSpec.describe ApplicationApi do
   subject { response }
 
   before { dispatch method, path }

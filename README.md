@@ -34,3 +34,21 @@ Write this like you would write production code at your company.
 * Let us know how long you worked on the project
   * We know this is a very open-ended project and a lot of time could be spent on it, we are looking for you to prioritize the most important areas of the problem and focus on those, we don’t want you spending multiple days on this project
 * Let us know what things you may not have completed but you think could be additions if you were to spend more time
+
+## Api Reference
+
+You can make the following API requests.
+
+**POST /api/v1.0/links**
+
+Params
+* link (hash object)
+  * url (string) - The URL you would like to shorten.
+
+Response
+* Hash
+  * slug (string) - the shortened slug
+  * url (string) - the original URL to be shortened
+  * usage_count (integer) - the number of times this link has redirected
+  * expires_at (datetime) - an optional expiry attribute, iso formatted
+  * created_at (datetime) - creation datetime, iso formatted

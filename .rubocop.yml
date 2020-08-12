@@ -2,5 +2,14 @@ require: rubocop-rails
 
 inherit_from: .rubocop_todo.yml
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/*/*.rb
+    - lib/tasks/auto_annotate_models.rake
+
 Style/Documentation:
   Enabled: false
+Style/ClassAndModuleChildren:
+  Exclude:
+    - app/api/api/*/*.rb
+
