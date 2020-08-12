@@ -9,6 +9,7 @@ RSpec.describe Api::V10::Links do
     let(:params) { { link: { url: url } } }
     let(:url) { 'https://google.com' }
 
+    its(['short_url']) { is_expected.to be_present }
     its(['slug']) { is_expected.to be_present }
     its(['url']) { is_expected.to eql url }
     its(['usage_count']) { is_expected.to be_zero }
@@ -34,6 +35,7 @@ RSpec.describe Api::V10::Links do
       dispatch method, path, params
     end
 
+    its(['short_url']) { is_expected.to be_present }
     its(['slug']) { is_expected.to be_present }
     its(['url']) { is_expected.to eql url }
     its(['usage_count']) { is_expected.to be_zero }

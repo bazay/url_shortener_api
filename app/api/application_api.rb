@@ -7,6 +7,8 @@ class ApplicationApi < Grape::API
   helpers ::Helpers::ApiResponseHelper
   helpers ::Helpers::VersionHelper
 
+  before { set_api_host! }
+
   mount Api::V10
 
   desc 'Application and API version information'

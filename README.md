@@ -48,6 +48,7 @@ Params
 Response   
 _Success_
 * Hash
+  * short_url (string) - the shortened URL
   * slug (string) - the shortened slug
   * url (string) - the original URL to be shortened
   * usage_count (integer) - the number of times this link has redirected
@@ -65,6 +66,7 @@ Params
 
 Response
 * Array[Hash]
+  * short_url (string) - the shortened URL
   * slug (string) - the shortened slug
   * url (string) - the original URL to be shortened
   * usage_count (integer) - the number of times this link has redirected
@@ -79,6 +81,7 @@ Params
 Response   
 _Success_
 * Hash
+  * short_url (string) - the shortened URL
   * slug (string) - the shortened slug
   * url (string) - the original URL to be shortened
   * usage_count (integer) - the number of times this link has redirected

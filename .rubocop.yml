@@ -8,6 +8,10 @@ Metrics/BlockLength:
     - lib/tasks/auto_annotate_models.rake
     - app/api/api/v10/links.rb
 
+Rails/SkipsModelValidations:
+  Exclude:
+    - app/controllers/redirects_controller.rb
+
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:

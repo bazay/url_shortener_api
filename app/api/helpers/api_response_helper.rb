@@ -23,5 +23,9 @@ module Helpers
       model.errors.messages
       present model, with: error_presenter
     end
+
+    def set_api_host!
+      Rails.application.default_url_options[:host] = request.host_with_port
+    end
   end
 end
